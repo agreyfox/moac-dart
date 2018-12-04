@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="moac library API docs, for the Dart programming language.">
+  <title>moac library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">moac</a></li>
+    <li class="self-crumb">moac library</li>
+  </ol>
+  <div class="self-name">moac</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><span class="package-name">moac</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="moac/moac-library.html">moac</a></li>
+          <li><a href="moac_server_client/moac_server_client-library.html">moac_server_client</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>moac library</h1>
+
+    
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="EthRpcMethods">
+          <span class="name "><a href="moac/EthRpcMethods-class.html">EthRpcMethods</a></span>
+        </dt>
+        <dd>
+          The Ethereum RPC method names
+        </dd>
+        <dt id="Moac">
+          <span class="name "><a href="moac/Moac-class.html">Moac</a></span>
+        </dt>
+        <dd>
+          The Moac JSON-RPC client class.
+Further details of this interface and its API specification can be found at
+<a href="https://github.com/Moac/wiki/wiki/JSON-RPC#web3_clientversion">https://github.com/Moac/wiki/wiki/JSON-RPC#web3_clientversion</a>.
+The API calls return null if an Moac error occurred.
+        </dd>
+        <dt id="MoacBlock">
+          <span class="name "><a href="moac/MoacBlock-class.html">MoacBlock</a></span>
+        </dt>
+        <dd>
+          An Moac block descriptor message
+        </dd>
+        <dt id="MoacDefaultBlock">
+          <span class="name "><a href="moac/MoacDefaultBlock-class.html">MoacDefaultBlock</a></span>
+        </dt>
+        <dd>
+          The Default Block parameter.
+The parameter selections are mutually exclusive.
+Note that the setters ignore the passed state value and simply set the property to true.
+        </dd>
+        <dt id="MoacError">
+          <span class="name "><a href="moac/MoacError-class.html">MoacError</a></span>
+        </dt>
+        <dd>
+          Manages Moac client errors
+        </dd>
+        <dt id="MoacFilter">
+          <span class="name "><a href="moac/MoacFilter-class.html">MoacFilter</a></span>
+        </dt>
+        <dd>
+          Filter message
+For filters created with newBlockFilter the object contains block hashes.
+For filters created with pendingTransactionFilter the class contains transaction hashes.
+For filters created with newFilter or getFilterChanges the class contains logs
+which are are MoacLog objects.
+        </dd>
+        <dt id="MoacINetworkAdapter">
+          <span class="name "><a href="moac/MoacINetworkAdapter-class.html">MoacINetworkAdapter</a></span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="MoacLog">
+          <span class="name "><a href="moac/MoacLog-class.html">MoacLog</a></span>
+        </dt>
+        <dd>
+          Moac log message
+        </dd>
+        <dt id="MoacRpcClient">
+          <span class="name "><a href="moac/MoacRpcClient-class.html">MoacRpcClient</a></span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="MoacRpcMethods">
+          <span class="name "><a href="moac/MoacRpcMethods-class.html">MoacRpcMethods</a></span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="MoacSyncStatus">
+          <span class="name "><a href="moac/MoacSyncStatus-class.html">MoacSyncStatus</a></span>
+        </dt>
+        <dd>
+          Sync status message
+        </dd>
+        <dt id="MoacTransaction">
+          <span class="name "><a href="moac/MoacTransaction-class.html">MoacTransaction</a></span>
+        </dt>
+        <dd>
+          An Moac transaction message
+        </dd>
+        <dt id="MoacTransactionReceipt">
+          <span class="name "><a href="moac/MoacTransactionReceipt-class.html">MoacTransactionReceipt</a></span>
+        </dt>
+        <dd>
+          An moac transaction receipt message
+        </dd>
+        <dt id="MoacUtilities">
+          <span class="name "><a href="moac/MoacUtilities-class.html">MoacUtilities</a></span>
+        </dt>
+        <dd>
+          General client support utilities
+        </dd>
+        <dt id="MoacWork">
+          <span class="name "><a href="moac/MoacWork-class.html">MoacWork</a></span>
+        </dt>
+        <dd>
+          An Moac work message.
+All elements of the work message must be present.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="moacErrorKey" class="constant">
+          <span class="name "><a href="moac/moacErrorKey-constant.html">moacErrorKey</a></span>
+          <span class="signature">&#8594; const String</span>
+        </dt>
+        <dd>
+          
+          
+  <div>
+            <span class="signature"><code>&#39;error&#39;</code></span>
+          </div>
+        </dd>
+        <dt id="moacResultKey" class="constant">
+          <span class="name "><a href="moac/moacResultKey-constant.html">moacResultKey</a></span>
+          <span class="signature">&#8594; const String</span>
+        </dt>
+        <dd>
+          Constants
+          
+  <div>
+            <span class="signature"><code>&#39;result&#39;</code></span>
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>moac library</h5>
+    <ol>
+      <li class="section-title"><a href="moac/moac-library.html#classes">Classes</a></li>
+      <li><a href="moac/EthRpcMethods-class.html">EthRpcMethods</a></li>
+      <li><a href="moac/Moac-class.html">Moac</a></li>
+      <li><a href="moac/MoacBlock-class.html">MoacBlock</a></li>
+      <li><a href="moac/MoacDefaultBlock-class.html">MoacDefaultBlock</a></li>
+      <li><a href="moac/MoacError-class.html">MoacError</a></li>
+      <li><a href="moac/MoacFilter-class.html">MoacFilter</a></li>
+      <li><a href="moac/MoacINetworkAdapter-class.html">MoacINetworkAdapter</a></li>
+      <li><a href="moac/MoacLog-class.html">MoacLog</a></li>
+      <li><a href="moac/MoacRpcClient-class.html">MoacRpcClient</a></li>
+      <li><a href="moac/MoacRpcMethods-class.html">MoacRpcMethods</a></li>
+      <li><a href="moac/MoacSyncStatus-class.html">MoacSyncStatus</a></li>
+      <li><a href="moac/MoacTransaction-class.html">MoacTransaction</a></li>
+      <li><a href="moac/MoacTransactionReceipt-class.html">MoacTransactionReceipt</a></li>
+      <li><a href="moac/MoacUtilities-class.html">MoacUtilities</a></li>
+      <li><a href="moac/MoacWork-class.html">MoacWork</a></li>
+    
+      <li class="section-title"><a href="moac/moac-library.html#constants">Constants</a></li>
+      <li><a href="moac/moacErrorKey-constant.html">moacErrorKey</a></li>
+      <li><a href="moac/moacResultKey-constant.html">moacResultKey</a></li>
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    moac 0.0.1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

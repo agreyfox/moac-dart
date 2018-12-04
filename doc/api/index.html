@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="made with love by dartdoc 0.20.2">
+  <meta name="description" content="moac API docs, for the Dart programming language.">
+  <title>moac - Dart API docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">moac package</li>
+  </ol>
+  <div class="self-name">moac</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><span class="package-name">moac</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="moac/moac-library.html">moac</a></li>
+          <li><a href="moac_server_client/moac_server_client-library.html">moac_server_client</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1>moac</h1>
+<h1>ethereum</h1>
+<p>[![Build Status] testing driver</p>
+<p>An moac RPC 2 client for Dart.</p>
+<p>This package provides a client to access the Moac JSON RPC API documented <a href="https://github.com/MOACChain/moac-core/wiki/JSON-RPC">here</a>
+It uses the JSON RPC2 interface and can be configured to use any of the endpoints described. The client runs on the server using HTTP, and in
+the browser using both HTTP and web sockets.</p>
+<p>The package currently implements 44 of the API calls documented, the main omissions being ones documented but no longer
+implemented in the latest version of geth.
+This encompasses the Solidity interface and most of the SHH whisper interface. As this Ethereum API is updated the package will
+be updated to suit.</p>
+<p>The mapping of Ethereum RPC data types to Dart types is as follows :-</p><ul><li>boolean - bool</li><li>string - String</li><li>quantity - int</li><li>data - BigInt(see below)</li></ul>
+<p>Examples can be found in the examples directory, also the unit test suite contains examples of calling every API interface.</p>
+<p>The package was tested against a geth client, version 1.7.2. The API provided should work on older geth clients
+but be aware some calls may return an error of not implemented.</p>
+<p>The package currently depends on the BigNum package, this package is not currently Dart 2.0 ready and may be
+superceded by a new BigInt implementation in Dart. This package will be updated approprately as and when any changes are
+needed.</p>
+      </section>
+      
+        <section class="summary">
+            <h2>Libraries</h2>
+          <dl>
+            <dt id="moac">
+              <span class="name"><a href="moac/moac-library.html">moac</a></span>
+            </dt>
+            <dd>
+              
+            </dd>            <dt id="moac_server_client">
+              <span class="name"><a href="moac_server_client/moac_server_client-library.html">moac_server_client</a></span>
+            </dt>
+            <dd>
+              
+            </dd>          </dl>
+        </section>
+
+  </div> <!-- /.main-content -->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    moac 0.0.1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

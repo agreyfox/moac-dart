@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the construct method from the MoacBlock class, for the Dart programming language.">
+  <title>construct method - MoacBlock class - moac library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">moac</a></li>
+    <li><a href="moac/moac-library.html">moac</a></li>
+    <li><a href="moac/MoacBlock-class.html">MoacBlock</a></li>
+    <li class="self-crumb">construct method</li>
+  </ol>
+  <div class="self-name">construct</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5>MoacBlock class</h5>
+    <ol>
+      <li class="section-title"><a href="moac/MoacBlock-class.html#constructors">Constructors</a></li>
+      <li><a href="moac/MoacBlock/MoacBlock.html">MoacBlock</a></li>
+      <li><a href="moac/MoacBlock/MoacBlock.fromMap.html">fromMap</a></li>
+    
+      <li class="section-title">
+        <a href="moac/MoacBlock-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="moac/MoacBlock/difficulty.html">difficulty</a></li>
+      <li><a href="moac/MoacBlock/extraData.html">extraData</a></li>
+      <li><a href="moac/MoacBlock/gasLimit.html">gasLimit</a></li>
+      <li><a href="moac/MoacBlock/gasUsed.html">gasUsed</a></li>
+      <li><a href="moac/MoacBlock/hash.html">hash</a></li>
+      <li><a href="moac/MoacBlock/logsBloom.html">logsBloom</a></li>
+      <li><a href="moac/MoacBlock/miner.html">miner</a></li>
+      <li><a href="moac/MoacBlock/nonce.html">nonce</a></li>
+      <li><a href="moac/MoacBlock/number.html">number</a></li>
+      <li><a href="moac/MoacBlock/parentHash.html">parentHash</a></li>
+      <li><a href="moac/MoacBlock/receiptsRoot.html">receiptsRoot</a></li>
+      <li><a href="moac/MoacBlock/sha3Uncles.html">sha3Uncles</a></li>
+      <li><a href="moac/MoacBlock/size.html">size</a></li>
+      <li><a href="moac/MoacBlock/stateRoot.html">stateRoot</a></li>
+      <li><a href="moac/MoacBlock/timestamp.html">timestamp</a></li>
+      <li><a href="moac/MoacBlock/totalDifficulty.html">totalDifficulty</a></li>
+      <li><a href="moac/MoacBlock/transactions.html">transactions</a></li>
+      <li><a href="moac/MoacBlock/transactionsAreHashes.html">transactionsAreHashes</a></li>
+      <li><a href="moac/MoacBlock/transactionsRoot.html">transactionsRoot</a></li>
+      <li><a href="moac/MoacBlock/uncles.html">uncles</a></li>
+      <li class="inherited"><a href="moac/MoacBlock/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="moac/MoacBlock/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title"><a href="moac/MoacBlock-class.html#instance-methods">Methods</a></li>
+      <li><a href="moac/MoacBlock/construct.html">construct</a></li>
+      <li><a href="moac/MoacBlock/toString.html">toString</a></li>
+      <li class="inherited"><a href="moac/MoacBlock/noSuchMethod.html">noSuchMethod</a></li>
+    
+      <li class="section-title inherited"><a href="moac/MoacBlock-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="moac/MoacBlock/operator_equals.html">operator ==</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <h1>construct method</h1>
+
+    <section class="multi-line-signature">
+      <span class="returntype">void</span>
+      <span class="name ">construct</span>
+(<wbr><span class="parameter" id="construct-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)
+    </section>
+    <section class="desc markdown">
+      <p>Construct from the supplied Map, only check for the keys we need.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span> </h2>
+      <pre class="language-dart"><code class="language-dart">void construct(Map data) {
+  if ((data == null) || (data[moacResultKey] == null)) {
+    return;
+  }
+  if (data[moacResultKey].containsKey(&#39;number&#39;)) {
+    _number = MoacUtilities.hexToInt(data[moacResultKey][&#39;number&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;hash&#39;)) {
+    _hash = MoacUtilities.safeParse(data[moacResultKey][&#39;hash&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;parentHash&#39;)) {
+    _parentHash = MoacUtilities.safeParse(data[moacResultKey][&#39;parentHash&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;nonce&#39;)) {
+    _nonce = MoacUtilities.safeParse(data[moacResultKey][&#39;nonce&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;sha3Uncles&#39;)) {
+    _sha3Uncles = MoacUtilities.safeParse(data[moacResultKey][&#39;sha3Uncles&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;logsBloom&#39;)) {
+    _logsBloom = MoacUtilities.safeParse(data[moacResultKey][&#39;logsBloom&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;transactionsRoot&#39;)) {
+    _transactionsRoot =
+        MoacUtilities.safeParse(data[moacResultKey][&#39;transactionsRoot&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;stateRoot&#39;)) {
+    _stateRoot = MoacUtilities.safeParse(data[moacResultKey][&#39;stateRoot&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;receiptsRoot&#39;)) {
+    _receiptsRoot =
+        MoacUtilities.safeParse(data[moacResultKey][&#39;receiptsRoot&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;miner&#39;)) {
+    _miner = MoacUtilities.safeParse(data[moacResultKey][&#39;miner&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;difficulty&#39;)) {
+    _difficulty = MoacUtilities.hexToInt(data[moacResultKey][&#39;difficulty&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;totalDifficulty&#39;)) {
+    _totalDifficulty =
+        MoacUtilities.hexToInt(data[moacResultKey][&#39;totalDifficulty&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;extraData&#39;)) {
+    _extraData = MoacUtilities.safeParse(data[moacResultKey][&#39;extraData&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;size&#39;)) {
+    _size = MoacUtilities.hexToInt(data[moacResultKey][&#39;size&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;gasLimit&#39;)) {
+    _gasLimit = MoacUtilities.hexToInt(data[moacResultKey][&#39;gasLimit&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;gasUsed&#39;)) {
+    _gasUsed = MoacUtilities.hexToInt(data[moacResultKey][&#39;gasUsed&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;timestamp&#39;)) {
+    _timestamp = DateTime.fromMillisecondsSinceEpoch(
+        MoacUtilities.hexToInt(data[moacResultKey][&#39;timestamp&#39;]));
+  }
+  if (data[moacResultKey].containsKey(&#39;uncles&#39;)) {
+    _uncles = MoacUtilities.hexToBigIntList(data[moacResultKey][&#39;uncles&#39;]);
+  }
+  if (data[moacResultKey].containsKey(&#39;transactions&#39;)) {
+    if ((data[moacResultKey][&#39;transactions&#39;] != null) &amp;&amp;
+        (data[moacResultKey][&#39;transactions&#39;].isNotEmpty)) {
+      if (data[moacResultKey][&#39;transactions&#39;][0] is String) {
+        &#47;&#47; Hashes
+        _transactionsAreHashes = true;
+        _transactions = MoacUtilities.hexToBigIntList(
+            data[moacResultKey][&#39;transactions&#39;]);
+      } else {
+        &#47;&#47; Transaction objects
+        _transactions = List&lt;MoacTransaction&gt;();
+        for (Map transaction in data[moacResultKey][&#39;transactions&#39;]) {
+          final Map buildTrans = {moacResultKey: transaction};
+          final MoacTransaction entry = MoacTransaction.fromMap(buildTrans);
+          _transactions.add(entry);
+        }
+      }
+    }
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    moac 0.0.1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>
